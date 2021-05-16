@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-      <a-button @click="getState">State</a-button>
-      <NameListPage />
+      <!-- <a-button @click="getState">State</a-button>
+      <NameListPage /> -->
+
+      <router-view></router-view>
+      
   </div>
 </template>
 
@@ -10,16 +13,14 @@
 <script>
 import Vue from 'vue';
 import Antd from 'ant-design-vue';
-import NameListPage from './views/NameList';
+
 
 import {mapState} from 'vuex';
 
 Vue.use(Antd);
 export default {
   name: 'App',
-  components:{
-    NameListPage,
-  },
+
 
   computed:{
     ...mapState({
@@ -43,6 +44,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
