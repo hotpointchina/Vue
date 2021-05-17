@@ -1,9 +1,5 @@
 <template>
     <div class="world">
-        <div class="sky">
-            <Nav />
-        </div>
-
         <div class="land">
             <NameListPage />
         </div>
@@ -12,14 +8,12 @@
 
 
 <script>
-import Nav from '../components/Nav';
+
 import NameListPage from './NameList';
 
 export default {
     name:'homepage',
-      components:{
-        //导航
-        Nav,
+    components:{
         // 名单排序-中文英文名混排，排序
         NameListPage,
     },
@@ -32,12 +26,6 @@ export default {
 .world{
     position: relative;
     padding: 20px;
-}
-.syk{
-    position: fixed;
-    top: 0px; left: 0px;
-    z-index: 3;
-    width: 100%;
 }
 .land{
     position: relative;
